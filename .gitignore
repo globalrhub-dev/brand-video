@@ -1,0 +1,19 @@
+# OS / editors
+.DS_Store
+
+# installed tooling (restore with the commands in README → "Tooling")
+node_modules/
+.agents/
+.claude/
+
+# HyperFrames caches, snapshots and project history (local only)
+**/.hyperframes/
+**/.media/
+**/.thumbnails/
+**/.waveform-cache/
+
+# rendered videos are 200 MB+ (over GitHub's 100 MB file limit) — attach them to a GitHub Release instead
+**/renders/
+
+# third-party Instagram reels used only as a style reference (not ours to redistribute)
+reference/

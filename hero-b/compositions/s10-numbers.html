@@ -1,0 +1,57 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden;  font-family: "Inter", sans-serif; color: #1F1A47; }
+    .n10 { position: absolute; top: 0; width: 560px; height: 1080px; }
+    .n10 .row { position: absolute; left: 0; right: 0; text-align: center; font-family: "EB Garamond", serif; font-weight: 600; font-size: 176px; line-height: 1; letter-spacing: -0.02em; color: #413894; }
+    .n10 .lab { position: absolute; left: 30px; right: 30px; top: 760px; text-align: center; font-family: "Space Mono", monospace; font-size: 27px; line-height: 1.35; }
+    .n10 .lab b { background: #FFAA3E; padding: 0 8px; }
+    #n10-b .row { color: #1F1A47; }
+    #n10-pg { position: absolute; inset: 0; background: #FBFAF7; overflow: hidden; }
+  </style>
+  <div id="root" data-composition-id="s10" data-width="1920" data-height="1080">
+    <div id="n10-pg">
+    <div class="n10" id="n10-a" style="left: 80px">
+      <div class="row e2" style="top: 150px">50+</div><div class="row e1" style="top: 280px">50+</div>
+      <div class="row main" id="n10-a-v" style="top: 410px">50+</div>
+      <div class="row e1" style="top: 540px">50+</div>
+      <div class="lab">students <b>mentored</b></div>
+    </div>
+    <div class="n10" id="n10-b" style="left: 680px">
+      <div class="row e2" style="top: 150px">$100K+</div><div class="row e1" style="top: 280px">$100K+</div>
+      <div class="row main" id="n10-b-v" style="top: 410px">$100K+</div>
+      <div class="row e1" style="top: 540px">$100K+</div>
+      <div class="lab">in scholarships <b>won by our students</b></div>
+    </div>
+    <div class="n10" id="n10-c" style="left: 1280px">
+      <div class="row e2" style="top: 150px">1:1</div><div class="row e1" style="top: 280px">1:1</div>
+      <div class="row main" style="top: 410px">1:1</div>
+      <div class="row e1" style="top: 540px">1:1</div>
+      <div class="lab">a <b>PhD mentor</b> for every student</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    (function () {
+      const root = document.querySelector('[data-composition-id="s10"]');
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#n10-pg", { y: 1080 }, { y: 0, duration: 0.6, ease: "power2.inOut" }, 0);
+      tl.to("#n10-pg", { y: -1080, duration: 0.6, ease: "power2.inOut" }, 2);
+      ["#n10-a", "#n10-b", "#n10-c"].forEach((c, i) => {
+        const at = 0.4 + i * 0.22;
+        tl.fromTo(c + " .main", { opacity: 0, filter: "blur(14px)", scale: 0.92 }, { opacity: 1, filter: "blur(0px)", scale: 1, duration: 0.3, ease: "expo.out" }, at);
+        tl.fromTo(c + " .e1", { opacity: 0, filter: "blur(6px)" }, { opacity: 0.16, filter: "blur(2px)", duration: 0.35, ease: "expo.out" }, at + 0.1);
+        tl.fromTo(c + " .e2", { opacity: 0, filter: "blur(8px)" }, { opacity: 0.06, filter: "blur(4px)", duration: 0.35, ease: "expo.out" }, at + 0.16);
+        tl.fromTo(c + " .lab", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.28, ease: "expo.out" }, at + 0.25);
+      });
+      // count-up as discrete steps, so any frame renders on its own
+      const a = root.querySelector("#n10-a-v"), b = root.querySelector("#n10-b-v");
+      for (let k = 0; k <= 12; k++) {
+        const e = 1 - Math.pow(1 - k / 12, 2);
+        tl.set(a, { textContent: Math.round(e * 50) + "+" }, 0.4 + k * 0.05);
+        tl.set(b, { textContent: "$" + Math.round(e * 100) + "K+" }, 0.62 + k * 0.05);
+      }
+      window.__timelines = window.__timelines || {};
+      window.__timelines["s10"] = tl;
+    })();
+  </script>
+</template>

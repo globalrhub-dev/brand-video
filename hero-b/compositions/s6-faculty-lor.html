@@ -1,0 +1,181 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Inter", sans-serif; color: #1F1A47; }
+    #f6-pg { position: absolute; inset: 0; background: #413894; overflow: hidden; }
+    #f6-rings, #f6-globe, #f6-strings { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+    .mono { font-family: "Space Mono", monospace; font-weight: 700; }
+    .chip { display: inline-block; padding: 2px 16px 6px; }
+    /* phase A: global faculty as ID cards */
+    #f6-capA { position: absolute; left: 120px; top: 110px; font-size: 60px; line-height: 1.25; color: #FBFAF7; }
+    #f6-capA .w { display: inline-block; }
+    #f6-chipA, #f6-chipA2 { background: #FFAA3E; color: #1F1A47; margin-top: 10px; }
+    #f6-subA { position: absolute; left: 124px; top: 404px; width: 560px; font-family: "Space Mono", monospace; font-size: 26px; line-height: 1.4; color: #E4E0FA; }
+    #f6-subA b { color: #FFAA3E; }
+    .fc { position: absolute; width: 250px; height: 420px; background: #FFFDF6; border-radius: 12px; box-shadow: 10px 13px 0 rgba(17, 16, 20, 0.3); }
+    .fc .band { height: 38px; border-radius: 12px 12px 0 0; background: #1F1A47; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; font-family: "Space Mono", monospace; font-weight: 700; font-size: 12px; letter-spacing: 0.08em; color: #FFAA3E; }
+    .fc .band i { font-style: normal; color: #CFCAF0; }
+    .fc .tack { position: absolute; left: 50%; top: -12px; width: 24px; height: 24px; margin-left: -12px; border-radius: 50%; background: #FFAA3E; border: 3px solid #1F1A47; }
+    .fc .ph { margin: 10px 10px 0; height: 232px; background: #E4E1F5; border-radius: 7px; overflow: hidden; }
+    .fc .ph img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%; }
+    .fc .who { padding: 10px 12px 0; }
+    .fc .who b { display: block; font-size: 22px; line-height: 1.1; }
+    .fc .who span { display: block; margin-top: 3px; font-family: "Space Mono", monospace; font-size: 15px; color: #4A4670; }
+    .fc .pub { position: absolute; left: 12px; right: 12px; bottom: 10px; border-top: 2px dashed #DAD6EC; padding-top: 6px; display: flex; align-items: baseline; justify-content: space-between; }
+    .fc .pub span { font-family: "Space Mono", monospace; font-size: 14px; color: #6A6690; }
+    .fc .pub b { font-family: "EB Garamond", serif; font-weight: 700; font-size: 40px; line-height: 1; color: #B4560A; }
+    /* phase B: letters of recommendation */
+    #f6-capB { position: absolute; left: 120px; top: 150px; font-size: 64px; line-height: 1.28; color: #FBFAF7; }
+    #f6-capB .w { display: inline-block; }
+    #f6-chipB { background: #FFAA3E; color: #1F1A47; margin-top: 8px; }
+    #f6-subB { position: absolute; left: 124px; top: 452px; width: 760px; font-family: "Space Mono", monospace; font-size: 28px; line-height: 1.4; color: #E4E0FA; }
+    #f6-subB i { font-style: normal; color: #FFAA3E; }
+    #f6-env { position: absolute; left: 1060px; top: 0; width: 700px; height: 1080px; }
+    #f6-back { position: absolute; left: 0; top: 560px; width: 700px; height: 520px; background: #E08F2C; border-radius: 10px 10px 0 0; }
+    #f6-flap { position: absolute; left: 0; top: 330px; width: 700px; height: 240px; }
+    #f6-letter { position: absolute; left: 60px; top: 130px; width: 580px; height: 760px; background: #FFFDF6; box-shadow: 0 16px 34px rgba(17, 16, 20, 0.25); }
+    #f6-letter .head { height: 118px; background: #1F1A47; display: flex; align-items: center; justify-content: space-between; padding: 0 34px; }
+    #f6-letter .head h3 { margin: 0; font-family: "EB Garamond", serif; font-weight: 600; font-size: 44px; line-height: 1; color: #FBFAF7; }
+    #f6-letter .head .crest { width: 58px; height: 58px; border-radius: 50%; border: 3px solid #FFAA3E; display: flex; align-items: center; justify-content: center; font-family: "EB Garamond", serif; font-weight: 700; font-size: 34px; color: #FFAA3E; }
+    #f6-letter .body { padding: 30px 38px 0; }
+    #f6-letter .to { font-size: 21px; color: #6A6690; }
+    #f6-letter p { margin: 14px 0 0; font-family: "EB Garamond", serif; font-size: 33px; line-height: 1.3; color: #1F1A47; }
+    .hl { background-image: linear-gradient(transparent 58%, #FFAA3E 58%, #FFAA3E 92%, transparent 92%); background-repeat: no-repeat; background-size: 0% 100%; }
+    #f6-sig { display: block; margin-top: 12px; width: 240px; height: 70px; }
+    #f6-letter .sign { font-family: "Space Mono", monospace; font-size: 19px; color: #4A4670; }
+    #f6-front { position: absolute; left: 0; top: 700px; width: 700px; height: 380px; }
+    #f6-seal { position: absolute; left: 290px; top: 676px; width: 120px; height: 120px; border-radius: 50%; background: #B4560A; border: 6px solid #8E3F05; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 12px rgba(17, 16, 20, 0.3); }
+    #f6-seal div { font-family: "EB Garamond", serif; font-weight: 700; font-size: 66px; color: #FFE2BC; line-height: 1; }
+  </style>
+  <div id="root" data-composition-id="s6" data-width="1920" data-height="1080">
+    <div id="f6-pg">
+      <svg id="f6-rings" viewBox="0 0 1920 1080" data-layout-ignore></svg>
+      <svg id="f6-globe" viewBox="0 0 1920 1080" data-layout-ignore>
+        <defs>
+          <radialGradient id="f6-gfill" cx="38%" cy="32%" r="75%"><stop offset="0%" stop-color="#F1EFFA"/><stop offset="55%" stop-color="#DCD8F2"/><stop offset="100%" stop-color="#B9B2E6"/></radialGradient>
+          <pattern id="f6-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="2.2" height="9" fill="#413894" opacity="0.35"/></pattern>
+          <clipPath id="f6-gclip"><circle cx="960" cy="610" r="285"/></clipPath>
+        </defs>
+        <g id="f6-g">
+          <ellipse cx="972" cy="912" rx="230" ry="26" fill="#1F1A47" opacity="0.35"/>
+          <circle cx="960" cy="610" r="285" fill="url(#f6-gfill)"/>
+          <g clip-path="url(#f6-gclip)"><circle cx="1080" cy="700" r="300" fill="url(#f6-hatch)"/></g>
+          <path id="f6-mer" d="" fill="none" stroke="#8E84D6" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="960" cy="610" r="285" fill="none" stroke="#1F1A47" stroke-width="5"/>
+          <g id="f6-pins"></g>
+        </g>
+      </svg>
+      <svg id="f6-strings" viewBox="0 0 1920 1080" data-layout-ignore></svg>
+      <div id="f6-A">
+        <div id="f6-capA" class="mono"><span class="w">Your</span> <span class="w">research,</span><br /><span class="chip" id="f6-chipA">reviewed by</span><br /><span class="chip" id="f6-chipA2">global faculty</span></div>
+        <div id="f6-subA">Professors from top universities, with <b>100+ publications</b> between them</div>
+      </div>
+      <div class="fc" id="f6-c1" style="left: 90px; top: 500px"><div class="tack"></div><div class="band">GLOBAL FACULTY<i>USA</i></div><div class="ph"><img src="assets/img/people/jetley.png" alt="" /></div><div class="who"><b>Dr. Gaurav Jetley</b><span>Colorado State Univ.</span></div><div class="pub"><span>Publications</span><b>5+</b></div></div>
+      <div class="fc" id="f6-c2" style="left: 370px; top: 640px"><div class="tack"></div><div class="band">GLOBAL FACULTY<i>USA</i></div><div class="ph"><img src="assets/img/people/zhang.png" alt="" /></div><div class="who"><b>Dr. Ran (Alan) Zhang</b><span>Texas Tech Univ.</span></div><div class="pub"><span>Publications</span><b>10+</b></div></div>
+      <div class="fc" id="f6-c3" style="left: 1600px; top: 260px"><div class="tack"></div><div class="band">GLOBAL FACULTY<i>USA</i></div><div class="ph"><img src="assets/img/people/kayhan.png" alt="" /></div><div class="who"><b>Dr. Varol Kayhan</b><span>Univ. of South Florida</span></div><div class="pub"><span>Publications</span><b>9+</b></div></div>
+      <div class="fc" id="f6-c4" style="left: 1300px; top: 210px"><div class="tack"></div><div class="band">GLOBAL FACULTY<i>USA</i></div><div class="ph"><img src="assets/img/people/conway.png" alt="" /></div><div class="who"><b>Dr. Daniel Conway</b><span>Univ. of Arkansas</span></div><div class="pub"><span>Publications</span><b>17+</b></div></div>
+      <div class="fc" id="f6-c5" style="left: 1450px; top: 660px"><div class="tack"></div><div class="band">GLOBAL FACULTY<i>USA</i></div><div class="ph"><img src="assets/img/people/shivendu.png" alt="" /></div><div class="who"><b>Dr. Shivendu S.</b><span>Univ. of South Florida</span></div><div class="pub"><span>Publications</span><b>64+</b></div></div>
+
+      <div id="f6-capB" class="mono"><span class="w">Letters</span> <span class="w">of</span><br /><span class="chip" id="f6-chipB">Recommendation</span></div>
+      <div id="f6-subB">written by the <i>professors</i> who guide your research</div>
+      <div id="f6-env">
+        <div id="f6-back"></div>
+        <svg id="f6-flap" viewBox="0 0 700 240"><path d="M0 240 L350 10 L700 240 Z" fill="#F0A94E"/></svg>
+        <div id="f6-letter">
+          <div class="head"><h3>Letter of Recommendation</h3><div class="crest">R</div></div>
+          <div class="body">
+            <div class="to">To the Admissions Committee,</div>
+            <p>It is my pleasure to recommend this student. Their <span class="hl" id="f6-h1">original research</span> and analytical rigour <span class="hl" id="f6-h2">set them apart</span> from their peers.</p>
+            <svg id="f6-sig" viewBox="0 0 240 70"><path id="f6-sp" d="M6 50 C 28 8 48 66 72 30 C 90 6 104 60 126 36 C 142 18 160 50 186 28 C 204 14 222 26 236 20" fill="none" stroke="#413894" stroke-width="4" stroke-linecap="round"/></svg>
+            <div class="sign">Professor · Global Faculty</div>
+          </div>
+        </div>
+        <svg id="f6-front" viewBox="0 0 700 380"><path d="M0 0 L350 170 L700 0 L700 380 L0 380 Z" fill="#FFC069"/><path d="M0 0 L350 170 L700 0" fill="none" stroke="#E08F2C" stroke-width="4"/><path d="M0 380 L270 150 M700 380 L430 150" stroke="#F2A94F" stroke-width="3"/></svg>
+        <div id="f6-seal"><div>R</div></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const D = 7.1;
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f6-pg", { y: 1080 }, { y: 0, duration: 0.6, ease: "power2.inOut" }, 0);
+      tl.to("#f6-pg", { y: -1080, duration: 0.6, ease: "power2.inOut" }, D - 0.6);
+      const root = document.querySelector('[data-composition-id="s6"]');
+      const NS = "http://www.w3.org/2000/svg";
+      const CX = 960, CY = 610, R = 285, LAT0 = (24 * Math.PI) / 180;
+      const rad = (d) => (d * Math.PI) / 180;
+      // orthographic projection of the sketched globe
+      const proj = (lat, lon, lon0) => {
+        const la = rad(lat), dl = rad(lon - lon0);
+        const x = Math.cos(la) * Math.sin(dl);
+        const y = Math.sin(la) * Math.cos(LAT0) - Math.cos(la) * Math.sin(LAT0) * Math.cos(dl);
+        const z = Math.sin(la) * Math.sin(LAT0) + Math.cos(la) * Math.cos(LAT0) * Math.cos(dl);
+        return [CX + R * x, CY - R * y, z];
+      };
+      const linesAt = (lon0) => {
+        let d = "";
+        const run = (pts) => { let pen = false; for (const [x, y, z] of pts) { if (z > 0.02) { d += (pen ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1); pen = true; } else pen = false; } };
+        for (let m = -180; m < 180; m += 30) { const p = []; for (let la = -88; la <= 88; la += 4) p.push(proj(la, m, lon0)); run(p); }
+        for (const la of [-60, -30, 0, 30, 60]) { const p = []; for (let lo = -180; lo <= 180; lo += 4) p.push(proj(la, lo, lon0)); run(p); }
+        return d;
+      };
+      // rings radiating from the globe (static backdrop)
+      const rings = root.querySelector("#f6-rings");
+      [360, 450, 545, 645, 750].forEach((r, i) => { const c = document.createElementNS(NS, "circle"); c.setAttribute("cx", CX); c.setAttribute("cy", CY); c.setAttribute("r", r); c.setAttribute("fill", "none"); c.setAttribute("stroke", "#5A50B4"); c.setAttribute("stroke-width", i % 2 ? 2 : 3); if (i % 2) c.setAttribute("stroke-dasharray", "4 14"); rings.appendChild(c); });
+      const LON = -96;
+      // real university locations: Colorado State, Texas Tech, USF, Arkansas, USF
+      const uni = [[40.57, -105.08], [33.58, -101.87], [28.06, -82.41], [36.07, -94.17], [28.06, -82.41]];
+      const pinG = root.querySelector("#f6-pins"), strG = root.querySelector("#f6-strings");
+      const cardPos = [[90, 500], [370, 640], [1600, 260], [1300, 210], [1450, 660]];
+      const pins = [], strings = [];
+      uni.forEach(([la, lo], i) => {
+        const [x, y] = proj(la, lo, LON);
+        if (i !== 4) { const g = document.createElementNS(NS, "g"); g.setAttribute("id", "f6-pin" + i); g.innerHTML = `<circle cx="${x}" cy="${y}" r="13" fill="#FFAA3E" stroke="#1F1A47" stroke-width="4"/><circle cx="${x}" cy="${y}" r="4" fill="#1F1A47"/>`; pinG.appendChild(g); pins.push(g); }
+        const [cl, ct] = cardPos[i];
+        const ex = cl + 125, ey = ct;                              // the card's tack
+        const mx = (x + ex) / 2, my = Math.max(y, ey) + 30;   // strings hang, clear of the caption
+        const p = document.createElementNS(NS, "path");
+        p.setAttribute("d", `M ${x.toFixed(1)} ${y.toFixed(1)} Q ${mx.toFixed(1)} ${my.toFixed(1)} ${ex} ${ey}`);
+        p.setAttribute("fill", "none"); p.setAttribute("stroke", "#FFAA3E"); p.setAttribute("stroke-width", "4"); p.setAttribute("stroke-linecap", "round");
+        strG.appendChild(p); strings.push(p);
+      });
+      const mer = root.querySelector("#f6-mer");
+      const cards = ["#f6-c1", "#f6-c2", "#f6-c3", "#f6-c4", "#f6-c5"];
+      const tilt = [-4, 3, 4, -2.5, -3];
+
+      // ---- phase A: the globe spins to the faculty, pins drop, strings carry their cards out ----
+      tl.fromTo("#f6-capA .w", { opacity: 0 }, { opacity: 1, duration: 0.01, stagger: 0.14 }, 0.45);
+      tl.fromTo(["#f6-chipA", "#f6-chipA2"], { scale: 0, transformOrigin: "0% 50%" }, { scale: 1, duration: 0.36, ease: "back.out(1.8)", stagger: 0.12 }, 0.75);
+      tl.fromTo("#f6-subA", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, 1.1);
+      tl.fromTo("#f6-rings", { opacity: 0, scale: 0.7, transformOrigin: "960px 610px" }, { opacity: 1, scale: 1, duration: 0.8, ease: "expo.out" }, 0.35);
+      tl.fromTo("#f6-g", { scale: 0.3, opacity: 0, transformOrigin: "960px 610px" }, { scale: 1, opacity: 1, duration: 0.55, ease: "back.out(1.5)" }, 0.4);
+      const easeO = gsap.parseEase("power3.out");
+      for (let k = 0; k <= 36; k++) tl.set(mer, { attr: { d: linesAt(-170 + 74 * easeO(k / 36)) } }, 0.4 + k * (1.3 / 36));
+      tl.fromTo(pins, { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, ease: "back.out(2.5)", stagger: 0.07 }, 1.72);
+      strings.forEach((p, i) => { const L = p.getTotalLength(); tl.set(p, { opacity: 0 }, 0); tl.set(p, { opacity: 1 }, 1.85 + i * 0.07); tl.fromTo(p, { strokeDasharray: `${L} ${L}`, strokeDashoffset: L }, { strokeDashoffset: 0, duration: 0.42, ease: "power2.out" }, 1.85 + i * 0.07); tl.set(p, { strokeDasharray: "3 13" }, 2.4 + i * 0.07); });
+      cards.forEach((c, i) => { tl.fromTo(c, { scale: 0.2, opacity: 0, rotation: tilt[i] * 4 }, { scale: 1, opacity: 1, rotation: tilt[i], duration: 0.45, ease: "back.out(1.6)" }, 2.0 + i * 0.08); });
+
+      // ---- phase B: globe and strings drop away, cards step back into a row; the letter rises ----
+      tl.to("#f6-A", { y: -40, opacity: 0, filter: "blur(6px)", duration: 0.3, ease: "power2.in" }, 3.35);
+      tl.to(["#f6-strings", "#f6-rings"], { opacity: 0, duration: 0.25 }, 3.35);
+      tl.to("#f6-g", { y: 760, duration: 0.55, ease: "power3.in" }, 3.35);
+      cards.forEach((c, i) => {
+        const [cl, ct] = cardPos[i];
+        tl.to(c, { x: 40 + 160 * i - cl, y: 830 - ct, rotation: 0, scale: 0.6, transformOrigin: "0% 0%", duration: 0.6, ease: "power3.inOut" }, 3.4 + i * 0.03);
+      });
+      tl.to(".fc .tack", { opacity: 0, duration: 0.2 }, 3.4);
+      tl.fromTo("#f6-capB .w", { opacity: 0 }, { opacity: 1, duration: 0.01, stagger: 0.14 }, 3.7);
+      tl.fromTo("#f6-chipB", { scale: 0, transformOrigin: "0% 50%" }, { scale: 1, duration: 0.36, ease: "back.out(1.8)" }, 3.98);
+      tl.fromTo("#f6-subB", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, 4.2);
+      tl.fromTo("#f6-env", { y: 820 }, { y: 0, duration: 0.55, ease: "expo.out" }, 3.6);
+      tl.fromTo("#f6-letter", { y: 640 }, { y: 0, duration: 0.7, ease: "power3.out" }, 3.95);
+      tl.fromTo("#f6-letter", { rotation: 0 }, { rotation: -2.5, duration: 0.5, ease: "power2.out" }, 4.4);
+      tl.fromTo("#f6-h1", { backgroundSize: "0% 100%" }, { backgroundSize: "100% 100%", duration: 0.32, ease: "power2.inOut" }, 4.7);
+      tl.fromTo("#f6-h2", { backgroundSize: "0% 100%" }, { backgroundSize: "100% 100%", duration: 0.28, ease: "power2.inOut" }, 4.98);
+      tl.fromTo("#f6-sp", { strokeDasharray: 400, strokeDashoffset: 400 }, { strokeDashoffset: 0, duration: 0.42, ease: "power1.inOut" }, 5.1);
+      tl.fromTo("#f6-seal", { scale: 0, rotation: -40 }, { scale: 1, rotation: -8, duration: 0.4, ease: "back.out(2.2)" }, 5.5);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["s6"] = tl;
+    })();
+  </script>
+</template>

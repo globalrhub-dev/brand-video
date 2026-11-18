@@ -1,0 +1,1143 @@
+[
+ {
+  "f": "keypress-003.wav",
+  "at": 0.113,
+  "gain": -19.563,
+  "st": -3.141
+ },
+ {
+  "f": "keypress-015.wav",
+  "at": 0.203,
+  "gain": -22.063,
+  "st": -2.684
+ },
+ {
+  "f": "keypress-027.wav",
+  "at": 0.293,
+  "gain": -21.797,
+  "st": -2.373
+ },
+ {
+  "f": "keypress-007.wav",
+  "at": 0.383,
+  "gain": -22.757,
+  "st": -1.06
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 0.653,
+  "gain": -27,
+  "st": 5.0
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 0.773,
+  "gain": -27,
+  "st": 6.5
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 0.893,
+  "gain": -27,
+  "st": 8.0
+ },
+ {
+  "f": "pop.mp3",
+  "at": 1.253,
+  "gain": -13,
+  "st": 0
+ },
+ {
+  "f": "pop.mp3",
+  "at": 1.403,
+  "gain": -13,
+  "st": 2
+ },
+ {
+  "f": "pop.mp3",
+  "at": 1.553,
+  "gain": -13,
+  "st": 4
+ },
+ {
+  "f": "whoosh.mp3",
+  "at": 2.633,
+  "gain": -21,
+  "st": 3
+ },
+ {
+  "f": "keypress-007.wav",
+  "at": 3.176,
+  "gain": -23.732,
+  "st": -0.431
+ },
+ {
+  "f": "keypress-015.wav",
+  "at": 3.222,
+  "gain": -21.966,
+  "st": 0.843
+ },
+ {
+  "f": "keypress-023.wav",
+  "at": 3.268,
+  "gain": -21.828,
+  "st": -0.058
+ },
+ {
+  "f": "keypress-031.wav",
+  "at": 3.314,
+  "gain": -24.857,
+  "st": 0.314
+ },
+ {
+  "f": "keypress-007.wav",
+  "at": 3.36,
+  "gain": -22.809,
+  "st": 0.785
+ },
+ {
+  "f": "keypress-015.wav",
+  "at": 3.406,
+  "gain": -20.632,
+  "st": 0.822
+ },
+ {
+  "f": "keypress-023.wav",
+  "at": 3.452,
+  "gain": -22.452,
+  "st": 0.828
+ },
+ {
+  "f": "keypress-031.wav",
+  "at": 3.498,
+  "gain": -22.71,
+  "st": 0.166
+ },
+ {
+  "f": "keypress-007.wav",
+  "at": 3.544,
+  "gain": -22.055,
+  "st": 0.316
+ },
+ {
+  "f": "keypress-015.wav",
+  "at": 3.59,
+  "gain": -22.828,
+  "st": -0.748
+ },
+ {
+  "f": "keypress-023.wav",
+  "at": 3.636,
+  "gain": -22.424,
+  "st": -0.825
+ },
+ {
+  "f": "keypress-031.wav",
+  "at": 3.682,
+  "gain": -24.836,
+  "st": -0.649
+ },
+ {
+  "f": "keypress-007.wav",
+  "at": 3.728,
+  "gain": -24.898,
+  "st": 0.127
+ },
+ {
+  "f": "keypress-015.wav",
+  "at": 3.774,
+  "gain": -21.92,
+  "st": 0.107
+ },
+ {
+  "f": "keypress-023.wav",
+  "at": 3.82,
+  "gain": -24.674,
+  "st": -0.344
+ },
+ {
+  "f": "keypress-031.wav",
+  "at": 3.866,
+  "gain": -25.136,
+  "st": 0.638
+ },
+ {
+  "f": "keypress-007.wav",
+  "at": 3.912,
+  "gain": -20.576,
+  "st": -0.3
+ },
+ {
+  "f": "keypress-015.wav",
+  "at": 3.958,
+  "gain": -23.769,
+  "st": -0.495
+ },
+ {
+  "f": "keypress-023.wav",
+  "at": 4.004,
+  "gain": -23.586,
+  "st": 0.458
+ },
+ {
+  "f": "key-press.mp3",
+  "at": 4.093,
+  "gain": -7,
+  "st": 0.0
+ },
+ {
+  "f": "rollover2.ogg",
+  "at": 4.113,
+  "gain": -21,
+  "st": 2
+ },
+ {
+  "f": "click-soft.mp3",
+  "at": 4.573,
+  "gain": -5,
+  "st": 0.0
+ },
+ {
+  "f": "whoosh-cinematic.mp3",
+  "at": 5.013,
+  "gain": -16,
+  "st": 0,
+  "seek": 1.7,
+  "fadeout": 0.5
+ },
+ {
+  "f": "impact-bass-1.mp3",
+  "at": 5.063,
+  "gain": -21,
+  "st": -3,
+  "fadeout": 0.9
+ },
+ {
+  "f": "whoosh.mp3",
+  "at": 5.833,
+  "gain": -19,
+  "st": -2
+ },
+ {
+  "f": "bong_001.ogg",
+  "at": 5.933,
+  "gain": -17,
+  "st": -2
+ },
+ {
+  "f": "paper-slide.mp3",
+  "at": 7.733,
+  "gain": -3,
+  "st": 0.0
+ },
+ {
+  "f": "paper-fold.mp3",
+  "at": 7.953,
+  "gain": -12,
+  "st": 2
+ },
+ {
+  "f": "keypress-003.wav",
+  "at": 7.803,
+  "gain": -16.426,
+  "st": -1.758
+ },
+ {
+  "f": "keypress-015.wav",
+  "at": 7.913,
+  "gain": -15.243,
+  "st": -2.029
+ },
+ {
+  "f": "keypress-027.wav",
+  "at": 8.023,
+  "gain": -16.631,
+  "st": -1.877
+ },
+ {
+  "f": "pop.mp3",
+  "at": 8.213,
+  "gain": -15,
+  "st": 3
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 8.403,
+  "gain": -22,
+  "st": 0.0
+ },
+ {
+  "f": "impactPlank_medium_000.ogg",
+  "at": 8.083,
+  "gain": -14,
+  "st": 0
+ },
+ {
+  "f": "impactPlank_medium_001.ogg",
+  "at": 8.383,
+  "gain": -14,
+  "st": 2
+ },
+ {
+  "f": "impactPlank_medium_002.ogg",
+  "at": 8.683,
+  "gain": -14,
+  "st": 4
+ },
+ {
+  "f": "impactPlank_medium_000.ogg",
+  "at": 8.983,
+  "gain": -14,
+  "st": 5
+ },
+ {
+  "f": "impactSoft_medium_000.ogg",
+  "at": 9.393,
+  "gain": -10,
+  "st": -3
+ },
+ {
+  "f": "rollover2.ogg",
+  "at": 9.803,
+  "gain": -21,
+  "st": 4
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 11.583,
+  "gain": -20,
+  "st": -3
+ },
+ {
+  "f": "impactSoft_medium_001.ogg",
+  "at": 11.633,
+  "gain": -15,
+  "st": 0
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 11.753,
+  "gain": -23,
+  "st": 0
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 11.803,
+  "gain": -23,
+  "st": 1
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 11.853,
+  "gain": -23,
+  "st": 2
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 11.903,
+  "gain": -23,
+  "st": 3
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 11.953,
+  "gain": -23,
+  "st": 4
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 12.003,
+  "gain": -23,
+  "st": 5
+ },
+ {
+  "f": "keypress-003.wav",
+  "at": 11.783,
+  "gain": -14.134,
+  "st": -3.165
+ },
+ {
+  "f": "keypress-015.wav",
+  "at": 11.923,
+  "gain": -16.464,
+  "st": -2.749
+ },
+ {
+  "f": "keypress-027.wav",
+  "at": 12.063,
+  "gain": -16.257,
+  "st": -1.6
+ },
+ {
+  "f": "keypress-007.wav",
+  "at": 12.203,
+  "gain": -16.305,
+  "st": -1.421
+ },
+ {
+  "f": "keypress-019.wav",
+  "at": 12.343,
+  "gain": -17.063,
+  "st": -2.524
+ },
+ {
+  "f": "pop.mp3",
+  "at": 12.083,
+  "gain": -17,
+  "st": 2
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 12.553,
+  "gain": -27,
+  "st": 0.0
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 12.593,
+  "gain": -27,
+  "st": -0.5
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 12.633,
+  "gain": -27,
+  "st": -1.0
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 12.673,
+  "gain": -27,
+  "st": -1.5
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 12.713,
+  "gain": -27,
+  "st": -2.0
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 12.753,
+  "gain": -19,
+  "st": 4
+ },
+ {
+  "f": "pop.mp3",
+  "at": 12.933,
+  "gain": -13,
+  "st": 3
+ },
+ {
+  "f": "paper-fold.mp3",
+  "at": 13.133,
+  "gain": -14,
+  "st": 2
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 13.083,
+  "gain": -25,
+  "st": 7
+ },
+ {
+  "f": "impactSoft_medium_002.ogg",
+  "at": 13.383,
+  "gain": -15,
+  "st": -4
+ },
+ {
+  "f": "pop.mp3",
+  "at": 13.753,
+  "gain": -17,
+  "st": 5
+ },
+ {
+  "f": "whoosh.mp3",
+  "at": 14.933,
+  "gain": -18,
+  "st": -4
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 15.033,
+  "gain": -22,
+  "st": 2
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 15.233,
+  "gain": -22,
+  "st": 0
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 15.333,
+  "gain": -22,
+  "st": 1
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 15.433,
+  "gain": -22,
+  "st": 2
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 15.533,
+  "gain": -22,
+  "st": 3
+ },
+ {
+  "f": "keypress-003.wav",
+  "at": 15.183,
+  "gain": -16.19,
+  "st": -2.77
+ },
+ {
+  "f": "keypress-015.wav",
+  "at": 15.313,
+  "gain": -15.569,
+  "st": -1.541
+ },
+ {
+  "f": "keypress-027.wav",
+  "at": 15.443,
+  "gain": -18.312,
+  "st": -1.797
+ },
+ {
+  "f": "keypress-007.wav",
+  "at": 15.573,
+  "gain": -16.968,
+  "st": -1.307
+ },
+ {
+  "f": "pop.mp3",
+  "at": 15.493,
+  "gain": -16,
+  "st": 3
+ },
+ {
+  "f": "pop.mp3",
+  "at": 16.033,
+  "gain": -15,
+  "st": 6
+ },
+ {
+  "f": "pop.mp3",
+  "at": 16.153,
+  "gain": -16,
+  "st": 8
+ },
+ {
+  "f": "keypress-003.wav",
+  "at": 17.483,
+  "gain": -17.282,
+  "st": -2.979
+ },
+ {
+  "f": "keypress-015.wav",
+  "at": 17.623,
+  "gain": -14.893,
+  "st": -1.471
+ },
+ {
+  "f": "pop.mp3",
+  "at": 17.853,
+  "gain": -15,
+  "st": 1
+ },
+ {
+  "f": "impactSoft_medium_000.ogg",
+  "at": 17.633,
+  "gain": -15,
+  "st": -3
+ },
+ {
+  "f": "whoosh.mp3",
+  "at": 18.033,
+  "gain": -22,
+  "st": -6
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 18.833,
+  "gain": -21,
+  "st": 2
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 18.903,
+  "gain": -21,
+  "st": 3
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 18.973,
+  "gain": -21,
+  "st": 4
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 19.043,
+  "gain": -21,
+  "st": 5
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 19.033,
+  "gain": -26,
+  "st": 6
+ },
+ {
+  "f": "impactPlank_medium_000.ogg",
+  "at": 19.253,
+  "gain": -18,
+  "st": 2
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 19.103,
+  "gain": -26,
+  "st": 7
+ },
+ {
+  "f": "impactPlank_medium_001.ogg",
+  "at": 19.333,
+  "gain": -18,
+  "st": 3
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 19.173,
+  "gain": -26,
+  "st": 8
+ },
+ {
+  "f": "impactPlank_medium_002.ogg",
+  "at": 19.413,
+  "gain": -18,
+  "st": 4
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 19.243,
+  "gain": -26,
+  "st": 9
+ },
+ {
+  "f": "impactPlank_medium_000.ogg",
+  "at": 19.493,
+  "gain": -18,
+  "st": 5
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 19.313,
+  "gain": -26,
+  "st": 10
+ },
+ {
+  "f": "impactPlank_medium_001.ogg",
+  "at": 19.573,
+  "gain": -18,
+  "st": 6
+ },
+ {
+  "f": "whoosh.mp3",
+  "at": 20.683,
+  "gain": -20,
+  "st": -5
+ },
+ {
+  "f": "keypress-003.wav",
+  "at": 20.733,
+  "gain": -17.243,
+  "st": -2.027
+ },
+ {
+  "f": "keypress-015.wav",
+  "at": 20.873,
+  "gain": -16.862,
+  "st": -1.968
+ },
+ {
+  "f": "pop.mp3",
+  "at": 21.083,
+  "gain": -16,
+  "st": 2
+ },
+ {
+  "f": "paper-fold.mp3",
+  "at": 20.883,
+  "gain": -10,
+  "st": -1
+ },
+ {
+  "f": "paper-slide.mp3",
+  "at": 21.333,
+  "gain": -4,
+  "st": 0.0
+ },
+ {
+  "f": "pencil.mp3",
+  "at": 21.753,
+  "gain": -19,
+  "st": 4,
+  "trim": 0.3,
+  "fadeout": 0.1
+ },
+ {
+  "f": "pencil.mp3",
+  "at": 22.033,
+  "gain": -20,
+  "st": 5,
+  "trim": 0.26,
+  "fadeout": 0.1
+ },
+ {
+  "f": "pencil.mp3",
+  "at": 22.153,
+  "gain": -17,
+  "st": 2,
+  "trim": 0.42,
+  "fadeout": 0.15
+ },
+ {
+  "f": "pop.mp3",
+  "at": 22.653,
+  "gain": -14,
+  "st": -2
+ },
+ {
+  "f": "paper-slide.mp3",
+  "at": 24.383,
+  "gain": -11,
+  "st": 0
+ },
+ {
+  "f": "paper-slide.mp3",
+  "at": 24.583,
+  "gain": -11,
+  "st": 1
+ },
+ {
+  "f": "paper-slide.mp3",
+  "at": 24.783,
+  "gain": -11,
+  "st": 2
+ },
+ {
+  "f": "pop.mp3",
+  "at": 25.053,
+  "gain": -18,
+  "st": 0.0
+ },
+ {
+  "f": "pop.mp3",
+  "at": 25.473,
+  "gain": -18,
+  "st": 1.5
+ },
+ {
+  "f": "pop.mp3",
+  "at": 25.893,
+  "gain": -18,
+  "st": 3.0
+ },
+ {
+  "f": "whoosh.mp3",
+  "at": 28.283,
+  "gain": -19,
+  "st": -2
+ },
+ {
+  "f": "whoosh.mp3",
+  "at": 28.403,
+  "gain": -20,
+  "st": 1
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 29.133,
+  "gain": -24,
+  "st": 0
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 29.193,
+  "gain": -24,
+  "st": 1
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 29.253,
+  "gain": -24,
+  "st": 2
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 29.313,
+  "gain": -24,
+  "st": 3
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 29.373,
+  "gain": -24,
+  "st": 4
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 29.433,
+  "gain": -24,
+  "st": 5
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 32.833,
+  "gain": -20,
+  "st": -2
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 32.933,
+  "gain": -21,
+  "st": 2
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 34.283,
+  "gain": -27,
+  "st": 4
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 34.383,
+  "gain": -24,
+  "st": 0
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 34.368,
+  "gain": -27,
+  "st": 5
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 34.468,
+  "gain": -24,
+  "st": 0
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 34.453,
+  "gain": -27,
+  "st": 6
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 34.553,
+  "gain": -24,
+  "st": 0
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 34.538,
+  "gain": -27,
+  "st": 7
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 34.638,
+  "gain": -24,
+  "st": 0
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 34.623,
+  "gain": -27,
+  "st": 8
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 34.723,
+  "gain": -24,
+  "st": 0
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 34.708,
+  "gain": -27,
+  "st": 9
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 34.808,
+  "gain": -24,
+  "st": 0
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 34.793,
+  "gain": -27,
+  "st": 10
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 34.893,
+  "gain": -24,
+  "st": 0
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 34.878,
+  "gain": -27,
+  "st": 11
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 34.978,
+  "gain": -24,
+  "st": 0
+ },
+ {
+  "f": "impactSoft_medium_000.ogg",
+  "at": 36.283,
+  "gain": -15,
+  "st": -2
+ },
+ {
+  "f": "impactSoft_medium_001.ogg",
+  "at": 36.503,
+  "gain": -15,
+  "st": 0
+ },
+ {
+  "f": "impactSoft_medium_002.ogg",
+  "at": 36.723,
+  "gain": -15,
+  "st": -4
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.233,
+  "gain": -28,
+  "st": 0
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.283,
+  "gain": -28,
+  "st": 1
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.333,
+  "gain": -28,
+  "st": 2
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.383,
+  "gain": -28,
+  "st": 0
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.433,
+  "gain": -28,
+  "st": 1
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.483,
+  "gain": -28,
+  "st": 2
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.533,
+  "gain": -28,
+  "st": 0
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.583,
+  "gain": -28,
+  "st": 1
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.633,
+  "gain": -28,
+  "st": 2
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.683,
+  "gain": -28,
+  "st": 0
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.733,
+  "gain": -28,
+  "st": 1
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.783,
+  "gain": -28,
+  "st": 2
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.833,
+  "gain": -28,
+  "st": 0
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.883,
+  "gain": -28,
+  "st": 1
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.933,
+  "gain": -28,
+  "st": 2
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 36.983,
+  "gain": -28,
+  "st": 0
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 37.033,
+  "gain": -28,
+  "st": 1
+ },
+ {
+  "f": "click_003.ogg",
+  "at": 37.083,
+  "gain": -28,
+  "st": 2
+ },
+ {
+  "f": "riser.mp3",
+  "at": 38.533,
+  "gain": -23,
+  "st": 0,
+  "seek": 1.4,
+  "fadeout": 0.12
+ },
+ {
+  "f": "whoosh-cinematic.mp3",
+  "at": 38.533,
+  "gain": -17,
+  "st": 0,
+  "seek": 1.9,
+  "fadeout": 0.5
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 38.563,
+  "gain": -26,
+  "st": 0
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 38.613,
+  "gain": -26,
+  "st": 1
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 38.663,
+  "gain": -26,
+  "st": 2
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 38.713,
+  "gain": -26,
+  "st": 3
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 38.763,
+  "gain": -26,
+  "st": 4
+ },
+ {
+  "f": "click_002.ogg",
+  "at": 38.813,
+  "gain": -26,
+  "st": 5
+ },
+ {
+  "f": "bong_001.ogg",
+  "at": 38.663,
+  "gain": -17,
+  "st": -3
+ },
+ {
+  "f": "pop.mp3",
+  "at": 39.003,
+  "gain": -12,
+  "st": 2
+ },
+ {
+  "f": "whoosh.mp3",
+  "at": 7.233,
+  "gain": -19.273,
+  "st": -3.376
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 11.433,
+  "gain": -20.677,
+  "st": -2.42
+ },
+ {
+  "f": "whoosh.mp3",
+  "at": 17.333,
+  "gain": -19.021,
+  "st": -3.015
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 23.833,
+  "gain": -19.404,
+  "st": -2.695
+ },
+ {
+  "f": "whoosh.mp3",
+  "at": 27.733,
+  "gain": -19.057,
+  "st": -4.24
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 34.133,
+  "gain": -19.876,
+  "st": -4.069
+ },
+ {
+  "f": "whoosh.mp3",
+  "at": 36.133,
+  "gain": -20.535,
+  "st": -4.273
+ },
+ {
+  "f": "whoosh-short.mp3",
+  "at": 38.133,
+  "gain": -20.051,
+  "st": -1.949
+ }
+]

@@ -1,0 +1,45 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden;  font-family: "Inter", sans-serif; color: #1F1A47; }
+    #a9-h { position: absolute; left: 120px; top: 96px; font-family: "EB Garamond", serif; font-weight: 600; font-size: 80px; line-height: 1; }
+    #a9-h .a { color: #413894; }
+    #a9-row { position: absolute; inset: 0; }
+    .a9-c { position: absolute; width: 236px; height: 200px; background: #fff; border-radius: 16px; box-shadow: 0 14px 34px rgba(31, 26, 71, 0.13); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+    .a9-c .lg { height: 104px; width: 196px; display: flex; align-items: center; justify-content: center; }
+    .a9-c .lg img { max-width: 196px; max-height: 104px; object-fit: contain; }
+    .a9-c .lg img.circ { width: 104px; height: 104px; border-radius: 50%; object-fit: cover; }
+    .a9-c span { font-family: "Space Mono", monospace; font-weight: 700; font-size: 20px; }
+    #a9-pg { position: absolute; inset: 0; background: #FBFAF7; overflow: hidden; }
+  </style>
+  <div id="root" data-composition-id="s9" data-width="1920" data-height="1080">
+    <div id="a9-pg">
+    <div id="a9-h">Where our students <span class="a">got in</span></div>
+    <div id="a9-row">
+      <div class="a9-c" id="a9-c0"><div class="lg"><img class="circ" src="assets/img/logos/nyu.webp" alt="" /></div><span>NYU Stern</span></div>
+      <div class="a9-c" id="a9-c1"><div class="lg"><img src="assets/img/logos/hku-crest.png" alt="" /></div><span>HKU</span></div>
+      <div class="a9-c" id="a9-c2"><div class="lg"><img src="assets/img/logos/ucla.png" alt="" /></div><span>UCLA</span></div>
+      <div class="a9-c" id="a9-c3"><div class="lg"><img src="assets/img/logos/lse.webp" alt="" /></div><span>LSE</span></div>
+      <div class="a9-c" id="a9-c4"><div class="lg"><img src="assets/img/logos/nus.webp" alt="" /></div><span>NUS</span></div>
+      <div class="a9-c" id="a9-c5"><div class="lg"><img src="assets/img/logos/uiuc.webp" alt="" /></div><span>UIUC</span></div>
+      <div class="a9-c" id="a9-c6"><div class="lg"><img src="assets/img/logos/psu.webp" alt="" /></div><span>Penn State</span></div>
+      <div class="a9-c" id="a9-c7"><div class="lg"><img src="assets/img/logos/curtin.webp" alt="" /></div><span>Curtin Singapore</span></div>
+    </div>
+  </div>
+  </div>
+  <script>
+    (function () {
+      const root = document.querySelector('[data-composition-id="s9"]');
+      const cards = [...root.querySelectorAll(".a9-c")];
+      cards.forEach((c, i) => { c.style.left = 96 + i * 214 + "px"; c.style.top = 770 - i * 64 + "px"; });
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#a9-pg", { y: 1080 }, { y: 0, duration: 0.6, ease: "power2.inOut" }, 0);
+      tl.to("#a9-pg", { y: -1080, duration: 0.6, ease: "power2.inOut" }, 2);
+      tl.fromTo("#a9-h", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.4);
+      // cards whip in along the diagonal, then the whole staircase drifts gently
+      tl.fromTo(cards, { x: 320, opacity: 0, filter: "blur(14px)" }, { x: 0, opacity: 1, filter: "blur(0px)", duration: 0.34, ease: "expo.out", stagger: 0.085 }, 0.43);
+      tl.fromTo("#a9-row", { x: 30 }, { x: -30, duration: 2.5, ease: "sine.inOut" }, 0.35);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["s9"] = tl;
+    })();
+  </script>
+</template>

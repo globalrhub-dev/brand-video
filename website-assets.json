@@ -1,0 +1,207 @@
+{
+ "website": "https://globalrhub.org/",
+ "website_repo": "../GlobalRhub/Rhub-marketing (Laravel site; images under public/)",
+ "assets": [
+  {
+   "file": "hero-b/assets/brand/favicon.png",
+   "url": "https://globalrhub.org/favicon.png",
+   "website_repo": "Rhub-marketing/public/favicon.png",
+   "note": ""
+  },
+  {
+   "file": "hero-b/assets/brand/grh-logo.svg",
+   "url": "https://globalrhub.org/images/grh-logo.svg",
+   "website_repo": "Rhub-marketing/public/images/grh-logo.svg",
+   "note": ""
+  },
+  {
+   "file": "hero-b/assets/img/logos/curtin.webp",
+   "url": "https://globalrhub.org/icons/Curtin_University_Singapore.webp",
+   "website_repo": "Rhub-marketing/public/icons/Curtin_University_Singapore.webp",
+   "note": ""
+  },
+  {
+   "file": "hero-b/assets/img/logos/lse.webp",
+   "url": "https://globalrhub.org/icons/London_school_of%20economics.webp",
+   "website_repo": "Rhub-marketing/public/icons/London_school_of economics.webp",
+   "note": ""
+  },
+  {
+   "file": "hero-b/assets/img/logos/nus.webp",
+   "url": "https://globalrhub.org/icons/NUS_Singapore.webp",
+   "website_repo": "Rhub-marketing/public/icons/NUS_Singapore.webp",
+   "note": ""
+  },
+  {
+   "file": "hero-b/assets/img/logos/nyu.webp",
+   "url": "https://globalrhub.org/icons/NYU.webp",
+   "website_repo": "Rhub-marketing/public/icons/NYU.webp",
+   "note": ""
+  },
+  {
+   "file": "hero-b/assets/img/logos/psu.webp",
+   "url": "https://globalrhub.org/icons/Pennsylvania_State_University_seal_svg.webp",
+   "website_repo": "Rhub-marketing/public/icons/Pennsylvania_State_University_seal_svg.webp",
+   "note": ""
+  },
+  {
+   "file": "hero-b/assets/img/logos/ucla.png",
+   "url": "https://globalrhub.org/icons/UCLA.png",
+   "website_repo": "Rhub-marketing/public/icons/UCLA.png",
+   "note": ""
+  },
+  {
+   "file": "hero-b/assets/img/logos/uiuc.webp",
+   "url": "https://globalrhub.org/icons/Univ-of-Illinois.webp",
+   "website_repo": "Rhub-marketing/public/icons/Univ-of-Illinois.webp",
+   "note": ""
+  },
+  {
+   "file": "hero-b/assets/img/programs/graduate-scholar.webp",
+   "url": "https://globalrhub.org/images/lead-popups/graduate-scholar.webp",
+   "website_repo": "Rhub-marketing/public/images/lead-popups/graduate-scholar.webp",
+   "note": ""
+  },
+  {
+   "file": "hero-b/assets/img/programs/high-school-scholar.webp",
+   "url": "https://globalrhub.org/images/lead-popups/high-school-scholar.webp",
+   "website_repo": "Rhub-marketing/public/images/lead-popups/high-school-scholar.webp",
+   "note": ""
+  },
+  {
+   "file": "hero-b/assets/img/programs/undergraduate-scholar.webp",
+   "url": "https://globalrhub.org/images/lead-popups/undergraduate-scholar.webp",
+   "website_repo": "Rhub-marketing/public/images/lead-popups/undergraduate-scholar.webp",
+   "note": ""
+  },
+  {
+   "file": "hero-b/assets/img/programs/usmle.webp",
+   "url": "https://globalrhub.org/images/lead-popups/usmle.webp",
+   "website_repo": "Rhub-marketing/public/images/lead-popups/usmle.webp",
+   "note": ""
+  },
+  {
+   "file": "hero-b/assets/img/programs/young-scholar.webp",
+   "url": "https://globalrhub.org/images/lead-popups/young-scholar.webp",
+   "website_repo": "Rhub-marketing/public/images/lead-popups/young-scholar.webp",
+   "note": ""
+  },
+  {
+   "file": "hero-b/assets/img/people/aryaman.png",
+   "url": "https://globalrhub.org/shared-uploads/feedback/1758181022_68cbb69ecc179.png",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/chakraborty.jpg",
+   "url": "https://globalrhub.org/shared-uploads/mentors/1760019747_68e7c52354b29.jpg",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/conway.png",
+   "url": "https://globalrhub.org/shared-uploads/faculty/1759918761_68e63aa917465.png",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/deepti.jpg",
+   "url": "https://globalrhub.org/shared-uploads/mentors/1760022622_68e7d05e6370b.jpg",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/dhhyan.png",
+   "url": "https://globalrhub.org/shared-uploads/feedback/1775633163_69d6030b81959.png",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/dia.png",
+   "url": "https://globalrhub.org/shared-uploads/feedback/1758181047_68cbb6b70334c.png",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/jetley.png",
+   "url": "https://globalrhub.org/shared-uploads/faculty/1759918770_68e63ab21bbe2.png",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/kayhan.png",
+   "url": "https://globalrhub.org/shared-uploads/faculty/1759918839_68e63af73b079.png",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/meghala.jpg",
+   "url": "https://globalrhub.org/shared-uploads/feedback/1775628358_69d5f0466333e.jpg",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/neharika.png",
+   "url": "https://globalrhub.org/shared-uploads/mentors/1759918877_68e63b1d5b205.png",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/nishchal.png",
+   "url": "https://globalrhub.org/shared-uploads/feedback/1792067694_6ad0c86e2be93.png",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/pooja.png",
+   "url": "https://globalrhub.org/shared-uploads/mentors/1759918885_68e63b2500286.png",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/sahas.jpg",
+   "url": "https://globalrhub.org/shared-uploads/feedback/1776431351_69e230f73fceb.jpg",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/sardana.png",
+   "url": "https://globalrhub.org/shared-uploads/mentors/1759919860_68e63ef47cac7.png",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/shivendu.png",
+   "url": "https://globalrhub.org/shared-uploads/faculty/1759918800_68e63ad0c09ff.png",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/siri.jpg",
+   "url": "https://globalrhub.org/shared-uploads/feedback/1776420023_69e204b7375cc.jpeg",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/sonam.png",
+   "url": "https://globalrhub.org/shared-uploads/feedback/1758180988_68cbb67c230f2.png",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/suhas.jpg",
+   "url": "https://globalrhub.org/shared-uploads/feedback/1776430771_69e22eb3df831.jpg",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  },
+  {
+   "file": "hero-b/assets/img/people/zhang.png",
+   "url": "https://globalrhub.org/shared-uploads/faculty/1759918788_68e63ac478566.png",
+   "website_repo": null,
+   "note": "uploaded on globalrhub.org (admin panel); not in the website repo"
+  }
+ ],
+ "derived": {
+  "hero-b/assets/img/logos/hku-crest.png": "left 58% crop of the HKU logo (https://globalrhub.org/icons/HongKong.webp): ffmpeg -i HongKong.webp -vf crop=iw*0.58:ih:0:0 hku-crest.png"
+ }
+}

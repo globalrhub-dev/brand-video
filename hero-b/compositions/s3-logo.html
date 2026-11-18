@@ -1,0 +1,35 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #s3-pg { position: absolute; inset: 0; background: #111014; overflow: hidden; }
+    #s3-flood { position: absolute; inset: 0; background: #FBFAF7; }
+    #s3-word { position: absolute; left: 0; right: 0; top: 380px; text-align: center; font-family: "EB Garamond", serif; font-weight: 600; font-size: 250px; line-height: 1; letter-spacing: -0.02em; color: #FBFAF7; white-space: nowrap; }
+    #s3-word .l { display: inline-block; }
+    #s3-logo { position: absolute; left: 50%; top: 372px; width: 860px; margin-left: -430px; mix-blend-mode: multiply; }
+    #s3-tag { position: absolute; left: 0; right: 0; top: 572px; text-align: center; font-family: "EB Garamond", serif; font-size: 58px; color: #1F1A47; }
+    #s3-tag i { font-style: normal; color: #413894; }
+  </style>
+  <div id="root" data-composition-id="s3" data-width="1920" data-height="1080">
+    <div id="s3-pg">
+    <div id="s3-flood"></div>
+    <div id="s3-word"><span class="l">G</span><span class="l">l</span><span class="l">o</span><span class="l">b</span><span class="l">a</span><span class="l">l</span><span class="l">&nbsp;</span><span class="l">R</span><span class="l">-</span><span class="l">H</span><span class="l">u</span><span class="l">b</span></div>
+    <img id="s3-logo" src="assets/brand/grh-logo.svg" alt="Global R-Hub" />
+    <div id="s3-tag">Research mentorship, <i>done right.</i></div>
+  </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.to("#s3-pg", { y: -1080, duration: 0.6, ease: "power2.inOut" }, 1.9);
+      tl.set("#s3-flood", { clipPath: "inset(100% 0% 0% 0%)" }, 0);
+      tl.fromTo("#s3-word .l", { opacity: 0.25, filter: "blur(10px)", y: 18 }, { opacity: 1, filter: "blur(0px)", y: 0, duration: 0.22, stagger: 0.035, ease: "power3.out" }, 0.04);
+      // black flips to paper from the bottom; the giant word hands over to the real logo
+      tl.to("#s3-flood", { clipPath: "inset(0% 0% 0% 0%)", duration: 0.36, ease: "power3.inOut" }, 0.72);
+      tl.to("#s3-word", { opacity: 0, scale: 0.55, y: -70, filter: "blur(6px)", duration: 0.32, ease: "power3.inOut" }, 0.72);
+      tl.fromTo("#s3-logo", { opacity: 0, scale: 1.25, filter: "blur(8px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.34, ease: "expo.out" }, 0.86);
+      tl.fromTo("#s3-tag", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.22, ease: "power2.out" }, 0.96);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["s3"] = tl;
+    })();
+  </script>
+</template>

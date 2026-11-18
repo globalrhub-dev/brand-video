@@ -1,0 +1,99 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Inter", sans-serif; color: #1F1A47; }
+    #e11-pg { position: absolute; inset: 0; background: #FBFAF7; overflow: hidden; }
+    #e11-card { position: absolute; left: 110px; top: 90px; width: 1700px; height: 900px; border-radius: 32px; overflow: hidden; box-shadow: 0 30px 70px rgba(31, 26, 71, 0.24); display: flex; }
+    #e11-left { width: 56%; height: 100%; position: relative; background: #EAE8F6; overflow: hidden; }
+    #e11-left .dots { position: absolute; inset: 0; background-image: radial-gradient(rgba(65, 56, 148, 0.16) 2px, transparent 2.5px); background-size: 26px 26px; }
+    .e11-it { position: absolute; }
+    .e11-pol { background: #FFFDF6; padding: 12px 12px 0; box-shadow: 8px 10px 0 rgba(31, 26, 71, 0.18); }
+    .e11-pol img { display: block; width: 190px; height: 200px; object-fit: cover; object-position: center top; }
+    .e11-pol b { display: block; padding: 8px 2px 12px; font-size: 18px; }
+    .e11-pol span { font-family: "Space Mono", monospace; font-weight: 400; font-size: 13px; color: #4A4670; display: block; }
+    .e11-tape { position: absolute; width: 110px; height: 32px; background: rgba(255, 170, 62, 0.85); }
+    .e11-tk { width: 360px; height: 150px; background: #413894; border-radius: 8px; padding: 10px 18px; box-shadow: 8px 10px 0 rgba(31, 26, 71, 0.18); }
+    .e11-tk .in { width: 100%; height: 100%; background: #FFFDF6; border-radius: 3px; display: flex; overflow: hidden; position: relative; }
+    .e11-tk .in img { width: 100px; height: 100%; object-fit: cover; object-position: center top; }
+    .e11-tk .in div { padding: 14px 14px 0; font-size: 22px; font-weight: 700; }
+    .e11-tk .in div span { display: block; font-size: 16px; color: #413894; margin-top: 4px; }
+    .e11-tk .st { position: absolute; right: 10px; bottom: 10px; border: 3px solid #B4560A; color: #B4560A; font-family: "Space Mono", monospace; font-weight: 700; font-size: 17px; padding: 1px 8px 3px; border-radius: 4px; transform: rotate(-10deg); }
+    .e11-lg { width: 128px; height: 100px; background: #fff; border-radius: 14px; box-shadow: 0 10px 24px rgba(31, 26, 71, 0.14); display: flex; align-items: center; justify-content: center; }
+    .e11-lg img { max-width: 96px; max-height: 72px; object-fit: contain; }
+    .e11-lg img.circ { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; }
+    .e11-badge { width: 130px; height: 130px; border-radius: 50%; background: #FFAA3E; border: 4px solid #1F1A47; display: flex; align-items: center; justify-content: center; font-family: "EB Garamond", serif; font-weight: 700; font-size: 64px; box-shadow: 6px 8px 0 rgba(31, 26, 71, 0.2); }
+    .e11-let { width: 230px; height: 260px; background: #FFFDF6; box-shadow: 8px 10px 0 rgba(31, 26, 71, 0.18); overflow: hidden; }
+    .e11-let .hd { height: 52px; background: #1F1A47; color: #FBFAF7; font-family: "EB Garamond", serif; font-size: 22px; line-height: 1; padding: 8px 14px; }
+    .e11-let .ln { height: 9px; border-radius: 5px; background: #E4E1F2; margin: 14px 16px 0; }
+    .e11-let .seal { position: absolute; right: 16px; bottom: 16px; width: 54px; height: 54px; border-radius: 50%; background: #B4560A; border: 3px solid #8E3F05; color: #FFE2BC; font-family: "EB Garamond", serif; font-weight: 700; font-size: 30px; display: flex; align-items: center; justify-content: center; }
+    #e11-glass { position: absolute; left: 230px; top: 360px; width: 500px; padding: 30px 36px; background: rgba(251, 250, 247, 0.95); border-radius: 22px; box-shadow: 0 16px 40px rgba(31, 26, 71, 0.22); }
+    #e11-glass img { display: block; width: 100%; mix-blend-mode: multiply; }
+    #e11-dark { width: 44%; height: 100%; background: #111014; position: relative; }
+    .e11-chk { position: absolute; left: 0; right: 0; height: 152px; }
+    .e11-sq { position: absolute; width: 76px; height: 76px; }
+    #e11-txt { position: absolute; left: 0; right: 0; top: 282px; text-align: center; font-family: "EB Garamond", serif; font-weight: 500; font-size: 92px; line-height: 1.02; color: #FBFAF7; }
+    #e11-txt i { font-style: normal; color: #FFAA3E; }
+    #e11-btnw { position: absolute; left: 0; right: 0; top: 540px; display: flex; justify-content: center; }
+    #e11-cta { background: #FFAA3E; color: #111014; font-weight: 700; font-size: 32px; padding: 18px 40px; border-radius: 999px; white-space: nowrap; }
+    #e11-url { position: absolute; left: 0; right: 0; top: 636px; text-align: center; font-family: "Space Mono", monospace; font-size: 26px; color: #BDB8D9; }
+  </style>
+  <div id="root" data-composition-id="s11" data-width="1920" data-height="1080">
+    <div id="e11-pg">
+      <div id="e11-card">
+        <div id="e11-left">
+          <div class="dots"></div>
+          <div class="e11-it e11-pol" id="e11-i1" style="left: 56px; top: 54px"><img src="assets/img/people/neharika.png" alt="" /><b>Dr. Neharika S.<span>PhD mentor</span></b></div>
+          <div class="e11-tape" id="e11-t1" style="left: 110px; top: 36px"></div>
+          <div class="e11-it e11-badge" id="e11-i2" style="left: 330px; top: 100px">1:1</div>
+          <div class="e11-it e11-lg" id="e11-i3" style="left: 520px; top: 60px"><img class="circ" src="assets/img/logos/nyu.webp" alt="" /></div>
+          <div class="e11-it e11-lg" id="e11-i4" style="left: 690px; top: 160px"><img src="assets/img/logos/hku-crest.png" alt="" /></div>
+          <div class="e11-it e11-lg" id="e11-i5" style="left: 760px; top: 680px"><img src="assets/img/logos/ucla.png" alt="" /></div>
+          <div class="e11-it e11-tk" id="e11-i6" style="left: 60px; top: 650px"><div class="in"><img src="assets/img/people/sonam.png" alt="" /><div>Sonam<span>→ Curtin University</span></div><div class="st">ADMITTED</div></div></div>
+          <div class="e11-it e11-let" id="e11-i7" style="left: 480px; top: 600px"><div class="hd">Letter of Recommendation</div><div class="ln"></div><div class="ln" style="width: 70%"></div><div class="ln"></div><div class="ln" style="width: 55%"></div><div class="seal">R</div></div>
+          <div id="e11-glass"><img src="assets/brand/grh-logo.svg" alt="Global R-Hub" /></div>
+        </div>
+        <div id="e11-dark">
+          <div class="e11-chk" id="e11-top" style="top: 0"></div>
+          <div class="e11-chk" id="e11-bot" style="bottom: 0"></div>
+          <div id="e11-txt">Your research,<br /><i>mentored.</i></div>
+          <div id="e11-btnw"><div id="e11-cta"><span data-var-text="cta">Book a free session</span> →</div></div>
+          <div id="e11-url">globalrhub.org</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const root = document.querySelector('[data-composition-id="s11"]');
+      const hash = (n) => { const x = Math.sin(n * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+      const tones = ["#413894", "#FFAA3E", "#FBFAF7", "#111014", "#8E84D6", "#111014"];
+      const squares = [];
+      ["#e11-top", "#e11-bot"].forEach((sel, r) => {
+        const band = root.querySelector(sel);
+        for (let row = 0; row < 2; row++) for (let col = 0; col < 10; col++) {
+          const k = r * 100 + row * 10 + col;
+          if ((row + col) % 2 && hash(k) > 0.35) continue;
+          const d = document.createElement("div"); d.className = "e11-sq";
+          d.style.left = col * 76 + "px"; d.style.top = (r === 0 ? row : 1 - row) * 76 + "px";
+          d.style.background = tones[Math.floor(hash(k + 7) * tones.length)];
+          band.appendChild(d); squares.push(d);
+        }
+      });
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#e11-pg", { y: 1080 }, { y: 0, duration: 0.6, ease: "power2.inOut" }, 0);
+      tl.fromTo("#e11-card", { y: 200, scale: 0.94 }, { y: 0, scale: 1, duration: 0.7, ease: "expo.out" }, 0.25);
+      // the film's own pieces get pinned around the logo
+      const items = [["#e11-i1", -6], ["#e11-i2", -8], ["#e11-i3", 5], ["#e11-i4", -4], ["#e11-i6", 4], ["#e11-i7", -5], ["#e11-i5", 6]];
+      items.forEach(([sel, r], i) => {
+        tl.fromTo(sel, { scale: 0.4, opacity: 0, rotation: r * 3 }, { scale: 1, opacity: 1, rotation: r, duration: 0.42, ease: "back.out(1.7)" }, 0.6 + i * 0.07);
+      });
+      tl.fromTo("#e11-t1", { opacity: 0, scale: 1.4, rotation: 0 }, { opacity: 1, scale: 1, rotation: 12, duration: 0.2, ease: "power3.out" }, 0.75);
+      tl.fromTo("#e11-glass", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 0.95);
+      tl.fromTo(squares, { scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)", stagger: { each: 0.012, from: "edges" } }, 0.7);
+      tl.fromTo("#e11-txt", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power2.out" }, 0.9);
+      tl.fromTo("#e11-cta", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 1.13);
+      tl.fromTo("#e11-url", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 1.25);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["s11"] = tl;
+    })();
+  </script>
+</template>

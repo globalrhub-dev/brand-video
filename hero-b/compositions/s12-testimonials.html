@@ -1,0 +1,54 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Inter", sans-serif; }
+    #q12-pg { position: absolute; inset: 0; background: #1F1A47; overflow: hidden; }
+    #q12-pg .dots { position: absolute; inset: 0; background-image: radial-gradient(rgba(251, 250, 247, 0.08) 2px, transparent 2.5px); background-size: 26px 26px; }
+    #q12-h { position: absolute; left: 120px; top: 100px; font-family: "EB Garamond", serif; font-weight: 600; font-size: 78px; line-height: 1; color: #FBFAF7; }
+    #q12-h i { font-style: normal; color: #FFAA3E; }
+    #q12-tag { position: absolute; left: 124px; top: 200px; font-family: "Space Mono", monospace; font-weight: 700; font-size: 26px; color: #CFCAF0; }
+    .q12-row { position: absolute; left: 0; width: 1920px; height: 280px; }
+    #q12-r1 { top: 290px; }
+    #q12-r2 { top: 610px; }
+    .q12 { position: absolute; top: 0; width: 530px; height: 272px; background: #FFFDF6; border-radius: 16px; padding: 24px 26px; box-shadow: 10px 14px 0 rgba(0, 0, 0, 0.3); display: flex; gap: 20px; }
+    .q12 img { width: 118px; height: 118px; border-radius: 14px; object-fit: cover; object-position: center top; border: 3px solid #FFAA3E; background: #EAE8F6; flex: none; }
+    .q12 .tx { flex: 1; }
+    .q12 b { display: block; font-size: 27px; color: #1F1A47; line-height: 1.1; }
+    .q12 span { display: inline-block; margin-top: 6px; font-family: "Space Mono", monospace; font-weight: 700; font-size: 16px; color: #1F1A47; background: #FFAA3E; padding: 1px 8px 3px; }
+    .q12 p { margin: 12px 0 0; font-family: "EB Garamond", serif; font-size: 26px; line-height: 1.22; color: #1F1A47; }
+    .q12 p::before { content: "“"; color: #B4560A; font-weight: 700; margin-right: 2px; }
+  </style>
+  <div id="root" data-composition-id="s12" data-width="1920" data-height="1080">
+    <div id="q12-pg">
+      <div class="dots"></div>
+      <div id="q12-h">In their <i>own words</i></div>
+      <div id="q12-tag">student stories from globalrhub.org →</div>
+      <div class="q12-row" id="q12-r1">
+          <div class="q12" style="left: 140px"><img src="assets/img/people/dia.png" alt="" /><div class="tx"><b>Dia Reddy</b><span>UIUC</span><p>Quality project of publication standard … more confidence in presenting the findings</p></div></div>
+          <div class="q12" style="left: 705px"><img src="assets/img/people/siri.jpg" alt="" /><div class="tx"><b>Siri Meghana</b><span>UCLA</span><p>… leveraged this experience to secure admission to UCLA</p></div></div>
+          <div class="q12" style="left: 1270px"><img src="assets/img/people/sahas.jpg" alt="" /><div class="tx"><b>Sahas Varma</b><span>Univ. of Hong Kong</span><p>… admission to The University of Hong Kong with a 100% scholarship</p></div></div>
+      </div>
+      <div class="q12-row" id="q12-r2">
+          <div class="q12" style="left: 140px"><img src="assets/img/people/dhhyan.png" alt="" /><div class="tx"><b>Dhhyan Gandhi</b><span>Univ. of Birmingham</span><p>… admission calls from University of Birmingham, Dubai, Northeastern University London and Bayes Business School</p></div></div>
+          <div class="q12" style="left: 705px"><img src="assets/img/people/meghala.jpg" alt="" /><div class="tx"><b>Meghala Rajeev</b><span>Shri Ram Universal School</span><p>… successfully publishing in an internationally recognized journal</p></div></div>
+          <div class="q12" style="left: 1270px"><img src="assets/img/people/nishchal.png" alt="" /><div class="tx"><b>Nishchal Chettri</b><span>Assam Downtown Univ.</span><p>His research was published in the ICONSTARS 2025 conference proceedings</p></div></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const D = 7.0;
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#q12-pg", { y: 1080 }, { y: 0, duration: 0.6, ease: "power2.inOut" }, 0);
+      tl.to("#q12-pg", { y: -1080, duration: 0.6, ease: "power2.inOut" }, D - 0.6);
+      tl.fromTo("#q12-h", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power2.out" }, 0.35);
+      tl.fromTo("#q12-tag", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.55);
+      // two rows: the top slides in from the left, the bottom from the right; both pause to be read, then sweep on
+      tl.fromTo("#q12-r1", { x: -1950 }, { x: 0, duration: 1.4, ease: "power3.out" }, 0.5);
+      tl.fromTo("#q12-r2", { x: 1950 }, { x: 0, duration: 1.4, ease: "power3.out" }, 0.62);
+      tl.to("#q12-r1", { x: 1950, duration: 1.1, ease: "power3.in" }, 4.6);
+      tl.to("#q12-r2", { x: -1950, duration: 1.1, ease: "power3.in" }, 4.7);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["s12"] = tl;
+    })();
+  </script>
+</template>

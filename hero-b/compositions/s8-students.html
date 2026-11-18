@@ -1,0 +1,53 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Inter", sans-serif; color: #1F1A47; }
+    .t8-wave { position: absolute; left: -40px; top: 0; width: 2000px; height: 1500px; }
+    #t8-h { position: absolute; left: 120px; top: 96px; font-family: "EB Garamond", serif; font-weight: 600; font-size: 80px; line-height: 1; }
+    #t8-h .w { display: inline-block; margin-right: 0.2em; }
+    #t8-h .a { color: #413894; }
+    #t8-sub { position: absolute; left: 124px; top: 200px; font-family: "Space Mono", monospace; font-size: 26px; color: #4A4670; }
+    .tk { position: absolute; width: 560px; height: 300px; background: #413894; border-radius: 10px; padding: 16px 30px; box-shadow: 10px 14px 0 rgba(31, 26, 71, 0.16); }
+    .tk .notch { position: absolute; top: 128px; width: 44px; height: 44px; border-radius: 50%; background: #FBFAF7; }
+    .tk .in { width: 100%; height: 100%; background: #FFFDF6; border-radius: 4px; display: flex; overflow: hidden; }
+    .tk .ph { width: 190px; flex: none; background: #EAE8F6; }
+    .tk .ph img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .tk .tx { padding: 22px 20px 0; }
+    .tk b { display: block; font-size: 36px; }
+    .tk .pub { font-family: "Space Mono", monospace; font-size: 18px; color: #6A6690; margin-top: 8px; }
+    .tk .adm { font-size: 25px; font-weight: 700; color: #413894; margin-top: 14px; line-height: 1.15; }
+    .st8 { position: absolute; right: 22px; bottom: 26px; padding: 4px 14px 6px; border: 5px solid #B4560A; border-radius: 6px; font-family: "Space Mono", monospace; font-weight: 700; font-size: 32px; letter-spacing: 0.05em; color: #B4560A; background: rgba(255, 253, 246, 0.6); }
+    #t8-pg { position: absolute; inset: 0; background: #FBFAF7; overflow: hidden; }
+  </style>
+  <div id="root" data-composition-id="s8" data-width="1920" data-height="1080">
+    <div id="t8-pg">
+    <div id="t8-h"><span class="w">Real</span><span class="w">students.</span><span class="w a">Real</span><span class="w a">results.</span></div>
+    <div id="t8-sub">Published research → top-university admits</div>
+    <div class="tk" id="t8-k1" style="left: 110px; top: 330px"><div class="notch" style="left: -22px"></div><div class="notch" style="right: -22px"></div>
+      <div class="in"><div class="ph"><img src="assets/img/people/sonam.png" alt="" /></div><div class="tx"><b>Sonam</b><div class="pub">Published research paper</div><div class="adm">→ Curtin University,<br />Singapore</div></div></div>
+      <div class="st8" id="t8-s1">ADMITTED</div></div>
+    <div class="tk" id="t8-k2" style="left: 680px; top: 470px"><div class="notch" style="left: -22px"></div><div class="notch" style="right: -22px"></div>
+      <div class="in"><div class="ph"><img src="assets/img/people/aryaman.png" alt="" /></div><div class="tx"><b>Aryaman</b><div class="pub">Published research paper</div><div class="adm">→ NYU Stern School<br />of Business</div></div></div>
+      <div class="st8" id="t8-s2">ADMITTED</div></div>
+    <div class="tk" id="t8-k3" style="left: 1250px; top: 610px"><div class="notch" style="left: -22px"></div><div class="notch" style="right: -22px"></div>
+      <div class="in"><div class="ph"><img src="assets/img/people/suhas.jpg" alt="" /></div><div class="tx"><b>Suhas</b><div class="pub">Published research paper</div><div class="adm">→ The University<br />of Hong Kong</div></div></div>
+      <div class="st8" id="t8-s3">ADMITTED</div></div>
+  </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#t8-pg", { y: 1080 }, { y: 0, duration: 0.6, ease: "power2.inOut" }, 0);
+      tl.to("#t8-pg", { y: -1080, duration: 0.6, ease: "power2.inOut" }, 3.9);
+      tl.fromTo("#t8-h .w", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, stagger: 0.08, ease: "power2.out" }, 0.52);
+      tl.fromTo("#t8-sub", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 0.9);
+      [["#t8-k1", -3], ["#t8-k2", 2], ["#t8-k3", -2]].forEach(([k, r], i) => {
+        tl.fromTo(k, { y: -560, rotation: r * 4, opacity: 0 }, { y: 0, rotation: r, opacity: 1, duration: 0.5, ease: "expo.out" }, 0.6 + i * 0.2);
+      });
+      ["#t8-s1", "#t8-s2", "#t8-s3"].forEach((s, i) => {
+        tl.fromTo(s, { scale: 2.4, rotation: 4, opacity: 0 }, { scale: 1, rotation: -11, opacity: 0.95, duration: 0.17, ease: "power4.in" }, 1.35 + i * 0.42);
+      });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["s8"] = tl;
+    })();
+  </script>
+</template>
