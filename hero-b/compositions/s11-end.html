@@ -1,6 +1,6 @@
 <template>
   <style>
-    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Inter", sans-serif; color: #1F1A47; }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Montserrat", sans-serif; color: #1F1A47; }
     #e11-pg { position: absolute; inset: 0; background: #FBFAF7; overflow: hidden; }
     #e11-card { position: absolute; left: 110px; top: 90px; width: 1700px; height: 900px; border-radius: 32px; overflow: hidden; box-shadow: 0 30px 70px rgba(31, 26, 71, 0.24); display: flex; }
     #e11-left { width: 56%; height: 100%; position: relative; background: #EAE8F6; overflow: hidden; }
@@ -9,32 +9,32 @@
     .e11-pol { background: #FFFDF6; padding: 12px 12px 0; box-shadow: 8px 10px 0 rgba(31, 26, 71, 0.18); }
     .e11-pol img { display: block; width: 190px; height: 200px; object-fit: cover; object-position: center top; }
     .e11-pol b { display: block; padding: 8px 2px 12px; font-size: 18px; }
-    .e11-pol span { font-family: "Space Mono", monospace; font-weight: 400; font-size: 13px; color: #4A4670; display: block; }
+    .e11-pol span { font-family: "Montserrat", sans-serif; font-weight: 400; font-size: 13px; color: #4A4670; display: block; }
     .e11-tape { position: absolute; width: 110px; height: 32px; background: rgba(255, 170, 62, 0.85); }
     .e11-tk { width: 360px; height: 150px; background: #413894; border-radius: 8px; padding: 10px 18px; box-shadow: 8px 10px 0 rgba(31, 26, 71, 0.18); }
     .e11-tk .in { width: 100%; height: 100%; background: #FFFDF6; border-radius: 3px; display: flex; overflow: hidden; position: relative; }
     .e11-tk .in img { width: 100px; height: 100%; object-fit: cover; object-position: center top; }
     .e11-tk .in div { padding: 14px 14px 0; font-size: 22px; font-weight: 700; }
     .e11-tk .in div span { display: block; font-size: 16px; color: #413894; margin-top: 4px; }
-    .e11-tk .st { position: absolute; right: 10px; bottom: 10px; border: 3px solid #B4560A; color: #B4560A; font-family: "Space Mono", monospace; font-weight: 700; font-size: 17px; padding: 1px 8px 3px; border-radius: 4px; transform: rotate(-10deg); }
+    .e11-tk .st { position: absolute; right: 10px; bottom: 10px; border: 3px solid #B4560A; color: #B4560A; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 17px; padding: 1px 8px 3px; border-radius: 4px; transform: rotate(-10deg); }
     .e11-lg { width: 128px; height: 100px; background: #fff; border-radius: 14px; box-shadow: 0 10px 24px rgba(31, 26, 71, 0.14); display: flex; align-items: center; justify-content: center; }
     .e11-lg img { max-width: 96px; max-height: 72px; object-fit: contain; }
     .e11-lg img.circ { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; }
-    .e11-badge { width: 130px; height: 130px; border-radius: 50%; background: #FFAA3E; border: 4px solid #1F1A47; display: flex; align-items: center; justify-content: center; font-family: "EB Garamond", serif; font-weight: 700; font-size: 64px; box-shadow: 6px 8px 0 rgba(31, 26, 71, 0.2); }
+    .e11-badge { width: 130px; height: 130px; border-radius: 50%; background: #FFAA3E; border: 4px solid #1F1A47; display: flex; align-items: center; justify-content: center; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 64px; box-shadow: 6px 8px 0 rgba(31, 26, 71, 0.2); }
     .e11-let { width: 230px; height: 260px; background: #FFFDF6; box-shadow: 8px 10px 0 rgba(31, 26, 71, 0.18); overflow: hidden; }
-    .e11-let .hd { height: 52px; background: #1F1A47; color: #FBFAF7; font-family: "EB Garamond", serif; font-size: 22px; line-height: 1; padding: 8px 14px; }
+    .e11-let .hd { height: 52px; background: #1F1A47; color: #FBFAF7; font-family: "Montserrat", sans-serif; font-size: 22px; line-height: 1; padding: 8px 14px; }
     .e11-let .ln { height: 9px; border-radius: 5px; background: #E4E1F2; margin: 14px 16px 0; }
-    .e11-let .seal { position: absolute; right: 16px; bottom: 16px; width: 54px; height: 54px; border-radius: 50%; background: #B4560A; border: 3px solid #8E3F05; color: #FFE2BC; font-family: "EB Garamond", serif; font-weight: 700; font-size: 30px; display: flex; align-items: center; justify-content: center; }
+    .e11-let .seal { position: absolute; right: 16px; bottom: 16px; width: 54px; height: 54px; border-radius: 50%; background: #B4560A; border: 3px solid #8E3F05; color: #FFE2BC; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 30px; display: flex; align-items: center; justify-content: center; }
     #e11-glass { position: absolute; left: 230px; top: 360px; width: 500px; padding: 30px 36px; background: rgba(251, 250, 247, 0.95); border-radius: 22px; box-shadow: 0 16px 40px rgba(31, 26, 71, 0.22); }
     #e11-glass img { display: block; width: 100%; mix-blend-mode: multiply; }
     #e11-dark { width: 44%; height: 100%; background: #111014; position: relative; }
     .e11-chk { position: absolute; left: 0; right: 0; height: 152px; }
     .e11-sq { position: absolute; width: 76px; height: 76px; }
-    #e11-txt { position: absolute; left: 0; right: 0; top: 282px; text-align: center; font-family: "EB Garamond", serif; font-weight: 500; font-size: 92px; line-height: 1.02; color: #FBFAF7; }
+    #e11-txt { position: absolute; left: 0; right: 0; top: 282px; text-align: center; font-family: "Montserrat", sans-serif; font-weight: 500; font-size: 92px; line-height: 1.02; color: #FBFAF7; }
     #e11-txt i { font-style: normal; color: #FFAA3E; }
     #e11-btnw { position: absolute; left: 0; right: 0; top: 540px; display: flex; justify-content: center; }
     #e11-cta { background: #FFAA3E; color: #111014; font-weight: 700; font-size: 32px; padding: 18px 40px; border-radius: 999px; white-space: nowrap; }
-    #e11-url { position: absolute; left: 0; right: 0; top: 636px; text-align: center; font-family: "Space Mono", monospace; font-size: 26px; color: #BDB8D9; }
+    #e11-url { position: absolute; left: 0; right: 0; top: 636px; text-align: center; font-family: "Montserrat", sans-serif; font-size: 26px; color: #BDB8D9; }
   </style>
   <div id="root" data-composition-id="s11" data-width="1920" data-height="1080">
     <div id="e11-pg">

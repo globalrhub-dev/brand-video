@@ -1,22 +1,23 @@
 <template>
   <style>
-    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Inter", sans-serif; color: #1F1A47; }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Montserrat", sans-serif; color: #1F1A47; }
     .p4-wave { position: absolute; left: -40px; top: 0; width: 2000px; height: 1500px; }
     #p4-card { position: absolute; left: 118px; top: 196px; width: 640px; height: 690px; background: #413894; border-radius: 6px; box-shadow: 10px 14px 0 rgba(31, 26, 71, 0.18); }
     #p4-card .hole { position: absolute; left: 34px; width: 24px; height: 24px; border-radius: 50%; background: #EAE8F6; }
-    #p4-title { position: absolute; left: 92px; top: 84px; font-family: "Space Mono", monospace; font-weight: 700; font-size: 64px; line-height: 1.12; color: #FBFAF7; }
+    #p4-title { position: absolute; left: 92px; top: 84px; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 64px; line-height: 1.12; color: #FBFAF7; }
     #p4-title .w { display: inline-block; }
-    .chip { display: inline-block; padding: 2px 14px 4px; font-family: "Space Mono", monospace; font-weight: 700; }
+    .chip { display: inline-block; padding: 2px 14px 4px; font-family: "Montserrat", sans-serif; font-weight: 700; }
     #p4-chip1 { position: absolute; left: 92px; top: 236px; font-size: 64px; background: #FFAA3E; color: #1F1A47; }
     #p4-chip2 { position: absolute; left: 92px; top: 368px; font-size: 28px; background: #FBFAF7; color: #1F1A47; }
-    #p4-more { position: absolute; left: 92px; bottom: 70px; font-family: "Space Mono", monospace; font-size: 24px; color: #D9D5F2; }
+    #p4-more { position: absolute; left: 92px; bottom: 56px; background: #FFAA3E; color: #1F1A47; font-weight: 800; font-size: 38px; line-height: 1.15; padding: 14px 24px 16px; box-shadow: 6px 7px 0 rgba(17, 16, 20, 0.3); }
+    #p4-more i { font-style: normal; display: block; font-weight: 600; font-size: 28px; margin-top: 4px; }
     #p4-tape { position: absolute; left: 600px; top: 160px; width: 190px; height: 54px; background: rgba(255, 170, 62, 0.72); }
     .pc { position: absolute; width: 660px; height: 140px; background: #FFFFFF; border-radius: 14px; box-shadow: 0 12px 30px rgba(31, 26, 71, 0.12); display: flex; align-items: center; gap: 22px; padding: 0 26px; }
     .pc .ic { width: 172px; height: 112px; border-radius: 10px; flex: none; overflow: hidden; background: #EAE8F6; }
     .pc .ic img { width: 100%; height: 100%; object-fit: cover; object-position: 44% 28%; transform: scale(1.18); transform-origin: 44% 32%; }
     .pc { padding: 0 26px 0 14px; }
     .pc b { display: block; font-weight: 700; font-size: 31px; line-height: 1.1; }
-    .pc span { display: block; margin-top: 6px; font-family: "Space Mono", monospace; font-size: 21px; color: #6A6690; }
+    .pc span { display: block; margin-top: 6px; font-family: "Montserrat", sans-serif; font-size: 21px; color: #6A6690; }
     .pc.med { background: #FFF3E3; box-shadow: 0 12px 30px rgba(255, 140, 30, 0.22); }
     #p4-doodle { position: absolute; left: 1690px; top: 96px; width: 120px; height: 60px; }
     #p4-pg { position: absolute; inset: 0; background: #EAE8F6; overflow: hidden; }
@@ -28,7 +29,7 @@
       <div id="p4-title"><span class="w">Programs</span><br /><span class="w">for</span> <span class="w">every</span></div>
       <div class="chip" id="p4-chip1">stage</div>
       <div class="chip" id="p4-chip2">Grade 6 → medical school</div>
-      <div id="p4-more">+ Research Advisory &amp; Thesis Support</div>
+      <div id="p4-more">+ Research Advisory<i>&amp; Thesis Support</i></div>
     </div>
     <div id="p4-tape"></div>
     <div class="pc" id="p4-c1" style="left: 830px; top: 128px"><div class="ic"><img src="assets/img/programs/young-scholar.webp" alt="" /></div><div><b>Young Scholar Program</b><span>Grades 6–8</span></div></div>
@@ -54,7 +55,7 @@
         tl.fromTo(c, { opacity: 0, y: -70, rotation: -4, filter: "blur(6px)" }, { opacity: 1, y: 0, rotation: 0, filter: "blur(0px)", duration: 0.42, ease: "expo.out" }, 1.1 + i * 0.3);
       });
       tl.fromTo("#p4-c5", { opacity: 0, scale: 0.6, rotation: 6 }, { opacity: 1, scale: 1, rotation: -1.5, duration: 0.5, ease: "back.out(1.8)" }, 2.4);
-      tl.fromTo("#p4-more", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 2.85);
+      tl.fromTo("#p4-more", { opacity: 0, scale: 0.4, rotation: -6, transformOrigin: "0% 100%" }, { opacity: 1, scale: 1, rotation: -1.5, duration: 0.45, ease: "back.out(2.2)" }, 2.85);
       tl.fromTo("#p4-zig", { strokeDasharray: 200, strokeDashoffset: 200 }, { strokeDashoffset: 0, duration: 0.4, ease: "power2.out" }, 1.75);
       window.__timelines = window.__timelines || {};
       window.__timelines["s4"] = tl;

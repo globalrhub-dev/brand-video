@@ -1,11 +1,11 @@
 <template>
   <style>
-    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Inter", sans-serif; color: #1F1A47; }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Montserrat", sans-serif; color: #1F1A47; }
     #m5-pg { position: absolute; inset: 0; background: #FBFAF7; overflow: hidden; }
     #m5-panel { position: absolute; inset: 0; background: #413894; }
     #m5-panel .dots { position: absolute; inset: 0; background-image: radial-gradient(rgba(251, 250, 247, 0.13) 2px, transparent 2.5px); background-size: 26px 26px; }
     .chip { display: inline-block; padding: 2px 14px 6px; }
-    .mono { font-family: "Space Mono", monospace; font-weight: 700; }
+    .mono { font-family: "Montserrat", sans-serif; font-weight: 700; }
     /* phase A: the pairing */
     #m5-capA { position: absolute; left: 120px; top: 70px; font-size: 48px; line-height: 1.28; }
     #m5-capA .w { display: inline-block; }
@@ -16,14 +16,14 @@
     .m5-perf { position: absolute; width: 20px; height: 20px; border-radius: 50%; background: #FBFAF7; }
     #m5-you { position: absolute; left: 330px; top: 818px; }
     #m5-you b { display: inline-block; background: #1F1A47; color: #FBFAF7; font-size: 30px; padding: 2px 14px 5px; }
-    #m5-you span { display: block; margin-top: 8px; font-family: "Space Mono", monospace; font-size: 24px; color: #4A4670; }
+    #m5-you span { display: block; margin-top: 8px; font-family: "Montserrat", sans-serif; font-size: 24px; color: #4A4670; }
     #m5-ring { position: absolute; left: 190px; top: 255px; width: 600px; height: 600px; }
     #m5-ring .ring { position: absolute; inset: 0; border: 2.5px dashed #8E84D6; border-radius: 50%; }
     .m5-ic { position: absolute; width: 70px; height: 70px; border-radius: 50%; background: #413894; border: 3px solid #FBFAF7; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 14px rgba(31, 26, 71, 0.2); }
     .m5-ic svg { width: 34px; height: 34px; }
     #m5-link { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
     #m5-badge { position: absolute; left: 870px; top: 440px; width: 210px; height: 210px; border-radius: 50%; background: #FFAA3E; border: 5px solid #1F1A47; display: flex; align-items: center; justify-content: center; box-shadow: 8px 10px 0 rgba(17, 16, 20, 0.25); }
-    #m5-badge div { font-family: "EB Garamond", serif; font-weight: 700; font-size: 104px; line-height: 1; letter-spacing: -0.02em; }
+    #m5-badge div { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 104px; line-height: 1; letter-spacing: -0.02em; }
     #m5-your { position: absolute; left: 1228px; top: 150px; font-size: 30px; color: #FBFAF7; }
     #m5-your i { font-style: normal; color: #FFAA3E; }
     #m5-week { position: absolute; left: 1260px; top: 860px; background: #FBFAF7; padding: 10px 18px 12px; font-size: 28px; box-shadow: 6px 7px 0 rgba(17, 16, 20, 0.3); }
@@ -33,18 +33,17 @@
     .mc { position: absolute; left: 0; top: 0; width: 430px; height: 560px; background: #FFFDF6; padding: 22px 22px 0; box-shadow: 14px 18px 0 rgba(17, 16, 20, 0.28); }
     .mc .ph { width: 386px; height: 386px; background: #EAE8F6; overflow: hidden; display: flex; align-items: center; justify-content: center; }
     .mc .ph img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-    .mc .ph .ini { font-family: "EB Garamond", serif; font-weight: 600; font-size: 170px; color: #413894; }
+    .mc .ph .ini { font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 170px; color: #413894; }
     .mc b { display: block; margin-top: 18px; font-size: 36px; line-height: 1.08; }
-    .mc span { display: block; margin-top: 8px; font-family: "Space Mono", monospace; font-size: 26px; color: #4A4670; }
+    .mc span { display: block; margin-top: 8px; font-family: "Montserrat", sans-serif; font-size: 26px; color: #4A4670; }
     .mc.glob { outline: 7px solid #FFAA3E; outline-offset: 0; }
-    .gtag { position: absolute; right: -26px; top: -30px; background: #FFAA3E; border: 4px solid #1F1A47; padding: 6px 18px 9px; font-family: "Space Mono", monospace; font-weight: 700; font-size: 34px; }
+    .gtag { position: absolute; right: -26px; top: -30px; background: #FFAA3E; border: 4px solid #1F1A47; padding: 6px 18px 9px; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 34px; }
     #m5-c0w { position: absolute; left: 1225px; top: 250px; width: 430px; height: 560px; }
     .m5-slot { position: absolute; top: 420px; width: 430px; height: 560px; transform: scale(0.72); transform-origin: 0 0; }
     /* phase B: the bench */
     #m5-capB { position: absolute; left: 120px; top: 110px; font-size: 56px; line-height: 1.3; color: #FBFAF7; }
     #m5-capB .w { display: inline-block; }
     #m5-chipB { background: #FFAA3E; color: #1F1A47; }
-    #m5-glob { color: #FFAA3E; }
   </style>
   <div id="root" data-composition-id="s5" data-width="1920" data-height="1080">
     <div id="m5-pg">
@@ -62,7 +61,7 @@
         <div id="m5-week" class="mono">weekly <i>1-on-1</i> sessions</div>
         <div id="m5-tape"></div>
       </div>
-      <div id="m5-capB" class="mono"><span class="w">Mentored</span> <span class="w">by</span> <span class="w chip" id="m5-chipB">PhD scholars</span><br /><span class="w" id="m5-glob">&amp; global mentors</span></div>
+      <div id="m5-capB" class="mono"><span class="w">Mentored</span> <span class="w">by</span> <br /><span class="w chip" id="m5-chipB">PhD project mentors</span></div>
       <!-- the lineup -->
       <div class="m5-slot" style="left: 465px"><div class="mc" id="m5-c1"><div class="ph"><img src="assets/img/people/pooja.png" alt="" /></div><b>Dr. Pooja Bachani</b><span>Biotech · AcSIR</span></div></div>
       <div class="m5-slot" style="left: 805px"><div class="mc" id="m5-c3"><div class="ph"><img src="assets/img/people/chakraborty.jpg" alt="" /></div><b>Angana Chakraborty</b><span>Univ. of Amsterdam</span></div></div>
